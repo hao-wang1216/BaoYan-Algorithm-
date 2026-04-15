@@ -11,7 +11,7 @@ int dijkstra(){
     memset(dist,0x3f,sizeof(dist));
     dist[1]=0;
     for(int i=1;i<=n;i++){
-        //先找当前没有确定最短路长度的点当中，距离最短的一个
+        //先找当前没有确定最短路长度的点当中，距离源点最短的一个
         int t=-1;//未选中
         for(int j=1;j<=n;j++){
             if(!st[j]&&(t==-1||dist[t]>dist[j])) t=j;
